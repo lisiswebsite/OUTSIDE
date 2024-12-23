@@ -1,0 +1,122 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Futura;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #F8F7F9;
+}
+
+.container {
+    text-align: center;
+    margin: 10%;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #160F29;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    color: #160F29;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    gap: 100px; /* Default gap */
+    justify-content: center;
+}
+
+.icon {
+    width: 150px; /* Default width for larger screens */
+    height: 150px; /* Adjust as needed */
+    border-radius: 50%;
+    box-shadow: inset 0 3px 6px rgba(255, 255, 255, 0.3),
+                inset 0 -3px 6px rgba(0, 0, 0, 0.2),
+                0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.caption {
+    margin-top: 10px; /* Space between the icon and caption */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #160F29; /* Caption color */
+    text-align: center; /* Center the caption under the icon */
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .icon-container {
+        gap: 15px; /* Reduced gap for medium screens */
+    }
+
+    .icon {
+        width: 120px; /* Smaller width for medium screens */
+        height: 120px; /* Maintain aspect ratio */
+    }
+
+    .caption {
+        font-size: 12px; /* Adjust font size as needed */
+    }
+}
+
+@media (max-width: 480px) {
+    .icon-container {
+        gap: 10px; /* Further reduced gap for small screens */
+    }
+
+    .icon {
+        width: 80%; /* Responsive width for small screens */
+        max-width: 100px; /* Set a maximum width */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .caption {
+        font-size: 9px; /* Adjust font size as needed */
+    }
+}
+
+/* Individual colors for 3D effect on each icon */
+.icon1 {
+    background: linear-gradient(to bottom, #98C1D9, #2C365E);
+}
+
+.icon2 {
+    background: linear-gradient(to bottom, #D3FAC7, #218380);
+}
+
+.icon3 {
+    background: linear-gradient(to bottom, #FFB7C3, #AF3B6E);
+}
+
+/* Hover effect */
+.icon:hover {
+    transform: translateY(-4px);
+    box-shadow: inset 0 3px 6px rgba(255, 255, 255, 0.4),
+                inset 0 -3px 6px rgba(0, 0, 0, 0.3),
+                0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Active effect for pressed look */
+.icon:active {
+    transform: translateY(2px);
+    box-shadow: inset 0 3px 6px rgba(255, 255, 255, 0.2),
+                inset 0 -3px 6px rgba(0, 0, 0, 0.4),
+                0 2px 4px rgba(0, 0, 0, 0.2);
+}
